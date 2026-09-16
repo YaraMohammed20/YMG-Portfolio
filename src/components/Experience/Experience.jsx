@@ -32,7 +32,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-gray-200  py-20 sm:py-24">
+    <section id="experience" className="bg-gray-50  py-20 sm:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <ScrollAnimation direction="up">
           <div className="text-center mb-16 sm:mb-20">

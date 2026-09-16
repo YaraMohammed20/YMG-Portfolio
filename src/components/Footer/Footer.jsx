@@ -92,6 +92,11 @@ export default function Footer() {
                   Experience
                 </a>
               </li>
+               <li>
+                <a href="/#certifications" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                  Certifications
+                </a>
+              </li>
               <li>
                 <a href="/#skills" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Skills
