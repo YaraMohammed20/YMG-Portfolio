@@ -6,7 +6,7 @@ import Prism from "../Animations/AnimatedBackground";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gray-950 py-20 sm:py-24">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gray-950 py-20 sm:py-35">
       <div className="absolute inset-0 z-0">
         <Prism
           height={3.5}

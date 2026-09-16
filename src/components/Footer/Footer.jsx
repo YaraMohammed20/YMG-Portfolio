@@ -12,9 +12,9 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
           <div className="lg:pr-10">
-            <Link to="/" className="inline-block text-4xl font-bold tracking-tight mb-6 text-gray-300">
+            <a href="/" className="inline-block text-4xl font-bold tracking-tight mb-6 text-gray-300">
               YMG<span className="text-gray-500 fs-5">.dev</span>
-            </Link>
+            </a>
             <p className="text-gray-100 leading-7 max-w-md">
               Front-End Developer focused on creating modern,
               responsive, and user-friendly web experiences with
@@ -78,34 +78,34 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li>
-                <Link to="/" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                <a href="/" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/about" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                <a href="/#about" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   About
-                </Link>
+                </a>
               </li>
-               <li>
-                <Link to="/experience" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+              <li>
+                <a href="/#experience" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Experience
-                </Link>
-              </li>   
+                </a>
+              </li>
               <li>
-                <Link to="/skills" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                <a href="/#skills" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Skills
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/projects" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                <a href="/#projects" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Projects
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
+                <a href="/#contact" className="text-gray-100 hover:text-gray-400 transition-colors duration-300">
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
