@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaEnvelope, FaHeart, FaArrowUp,} from "react-icons/fa6";
-
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth",
-    });
-  };
-
+ 
   return (
+  <>
     <footer className="relative bg-black text-white overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
@@ -140,31 +136,17 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-300" />
-        <div className="py-7 flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="py-7 flex flex-col md:flex-row items-center justify-around gap-5">
           <p className="text-sm text-gray-100 text-center md:text-left">
             © {new Date().getFullYear()} YMG. All rights reserved.
           </p>
           <p className="text-sm text-gray-100 flex items-center gap-2">
             Made with
-            <FaHeart className="text-gray-700" />
+            <FaHeart className="text-gray-600" />
           </p>
-          <button
-            onClick={scrollToTop}
-            aria-label="Back to top"
-            className="
-              w-10 h-10 rounded-full
-              border border-gray-300
-              bg-white
-              flex items-center justify-center
-              text-gray-700
-              hover:bg-gray-900
-              hover:text-white
-              hover:border-gray-900
-              transition-all duration-300">
-            <FaArrowUp />
-          </button>
         </div>
       </div>
     </footer>
+  </>
   );
 }

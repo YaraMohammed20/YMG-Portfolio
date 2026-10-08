@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
@@ -9,12 +9,40 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
     { name: "Certifications", href: "#certifications" },
+    { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
+
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector(link.href))
+      .filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find(
+          (entry) => entry.isIntersecting
+        );
+
+        if (visibleSection) {
+          const activeLink = links.find(
+            (link) => link.href === `#${visibleSection.target.id}`
+          );
+
+          if (activeLink) {
+            setActive(activeLink.name);
+          }
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   const handleClick = (name) => {
     setActive(name);
@@ -49,7 +77,7 @@ export default function Navbar() {
           </div>
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-xl text-gray-700"
+            className="lg:hidden text-xl text-gray-300"
           >
             {open ? <FaXmark /> : <FaBars />}
           </button>
@@ -64,8 +92,8 @@ export default function Navbar() {
                   onClick={() => handleClick(link.name)}
                   className={`w-full text-center text-sm font-medium px-5 py-3 rounded-full transition-all duration-300 ${
                     active === link.name
-                       ? "bg-gray-100 text-black"
-                       : "text-gray-300 hover:text-black hover:bg-gray-200"
+                      ? "bg-gray-100 text-black"
+                      : "text-gray-300 hover:text-black hover:bg-gray-200"
                   }`}
                 >
                   {link.name}

@@ -59,9 +59,9 @@ export default function Skills() {
   return ( 
     <section id="skills" className="py-28 bg-gray-200 "> 
       <div className="max-w-7xl mx-auto px-6"> 
-        <div className="grid lg:grid-cols-3 gap-16 items-start"> 
+        <div className="flex flex-col "> 
           <FadeUp> 
-            <div className="lg:sticky lg:top-24"> 
+            <div className="lg:sticky lg:top-24 self-center">
               <p className="text-gray-500 font-semibold uppercase tracking-widest text-sm"> 
                 My Skills 
               </p> 
@@ -73,7 +73,7 @@ export default function Skills() {
                 A collection of technologies and tools I use to create 
                 responsive, modern and user-friendly web applications. 
               </p> 
-              <div className="w-20 h-1 bg-gray-900 mt-8 rounded-full" /> 
+              <div className="w-20 h-1 bg-gray-900 mb-8 mt-4 rounded-full " /> 
             </div> 
           </FadeUp> 
           
@@ -85,14 +85,11 @@ export default function Skills() {
               {skills.map((skill) => ( 
                 <FadeItem key={skill.name}> 
                   <div 
-                    className="group relative overflow-hidden flex items-center gap-4 p-5 rounded-2xl border border-gray-200 bg-gray-100 hover:-translate-y-2 hover:bg-gray-50 hover:border-gray-400 hover:shadow-lg hover:shadow-gray-200/60 transition-all duration-500 ease-out"
-                  > 
+                    className="group relative overflow-hidden flex items-center gap-4 p-5 rounded-2xl border border-gray-200 bg-gray-100 hover:-translate-y-2 hover:bg-gray-50 hover:border-gray-400 hover:shadow-lg hover:shadow-gray-200/60 transition-all duration-500 ease-out"> 
                     <div className="absolute -right-10 -top-10 w-24 h-24 rounded-full bg-gray-200/50 group-hover:scale-150 transition-transform duration-700" />
-
                     <div className="relative group-hover:scale-110 group-hover:rotate-6 transition-all duration-500"> 
                       {skill.icon} 
                     </div> 
-
                     <div className="relative"> 
                       <h3 className="font-semibold text-gray-800 group-hover:translate-x-1 transition-transform duration-300"> 
                         {skill.name} 
@@ -101,7 +98,6 @@ export default function Skills() {
                         Technology 
                       </p> 
                     </div> 
-
                     <div className="absolute bottom-0 left-0 w-0 h-1 bg-black group-hover:w-full transition-all duration-500" />
                   </div> 
                 </FadeItem> 

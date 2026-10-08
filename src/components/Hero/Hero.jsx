@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
-import portImg from "../../assets/MeD.png";
+import portImg from "../../assets/hero-4x.webp";
 import MaskedHeading from "../Animations/MaskedHeading";
 import Prism from "../Animations/AnimatedBackground";
 
